@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recuperar Senha</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #91c794;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 45px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(11, 44, 23, 0.15);
+            text-align: center;
+        }
+
+        .icone {
+            background-color: #e5f1e3;
+            color: #145A32;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        h1 {
+            color: #145A32;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .descricao {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .campo {
+            text-align: left;
+            margin-bottom: 22px;
+        }
+
+        .campo label {
+            display: block;
+            color: #145A32;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .campo input:focus {
+            border-color: #5b8f5e;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #145A32;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1d7543;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-top: 25px;
+            color: #145A32;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .voltar:hover {
+            text-decoration: underline;
+        }
+
+        #mensagem {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #145A32;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icone">
+            <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <h1>Esqueceu sua senha?</h1>
+
+        <p class="descricao">
+            Não se preocupe! Digite o e-mail cadastrado na sua conta
+            para solicitar a recuperação da sua senha.
+        </p>
+
+        <form onsubmit="recuperarSenha(event)">
+
+            <div class="campo">
+                <label for="email">E-mail cadastrado</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <button type="submit">
+                Enviar solicitação
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+        <a href="login.html" class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar para o login
+        </a>
+
+    </div>
+
+    <script>
+        function recuperarSenha(event) {
+            event.preventDefault();
+
+            document.getElementById("mensagem").innerText =
+                "Solicitação registrada."
+        }
+    </script>
+
+</body>
+</html>

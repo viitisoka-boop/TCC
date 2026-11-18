@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histórico da Nina</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8f3;
+    color: #263b2b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font: 25px 'Bree Serif', serif;
+    color: #0b2c17;
+}
+
+nav a {
+    color: #0b2c17;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 13px;
+}
+
+.banner, footer {
+    background: #5b8f5e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: 35px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.perfil {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-family: 'Bree Serif', serif;
+    color: #0b2c17;
+}
+
+.info {
+    background: #e5f0e2;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.botao {
+    display: block;
+    background: #5b8f5e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    background: #0b2c17;
+}
+
+.voltar {
+    background: #0b2c17;
+}
+
+footer {
+    background: #91c794;
+    color: #0b2c17;
+    margin-top: auto;
+}
+
+/* MODO ESCURO */
+
+body.dark-mode {
+    background: #17251b;
+    color: #e5eee6;
+}
+
+.dark-mode header {
+    background: #202f24;
+}
+
+.dark-mode .logo,
+.dark-mode nav a {
+    color: #b4d9b6;
+}
+
+.dark-mode nav a:hover {
+    color: white;
+}
+
+.dark-mode .banner {
+    background: #263b2c;
+}
+
+.dark-mode .perfil {
+    background: #202f24;
+}
+
+.dark-mode .info {
+    background: #263b2c;
+    color: #e5eee6;
+}
+
+.dark-mode h2 {
+    color: #b4d9b6;
+}
+
+.dark-mode .botao {
+    background: #5b8f5e;
+    color: white;
+}
+
+.dark-mode .botao:hover {
+    background: #354b39;
+}
+
+.dark-mode .voltar {
+    background: #354b39;
+}
+
+.dark-mode footer {
+    background: #202f24;
+    color: #b4d9b6;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🐾 PULSO VERDE</div>
+
+    <nav>
+        <a href="inicial.html">INÍCIO</a>
+        <a href="adoções.html">ADOÇÃO</a>
+        <a href="doacao.html">DOAÇÕES</a>
+        <a href="denuncias.html">DENÚNCIAS</a>
+        <a href="leis.html">LEIS</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Conheça a Nina 🐱</h1>
+    <p>Um pouquinho da história da nossa amiga!</p>
+</section>
+
+<main class="container">
+
+    <section class="perfil">
+        <div>
+            <h2>Nina</h2>
+            <p><strong>Espécie:</strong> Gato</p>
+            <p><strong>Idade:</strong> 7 meses</p>
+            <p><strong>Personalidade:</strong> Curiosa e brincalhona.</p>
+        </div>
+    </section>
+
+    <section class="info">
+        <h2>Comportamento</h2>
+        <p>
+            Nina é uma gatinha curiosa, alegre e brincalhona.
+            Gosta de explorar ambientes e se divertir com brinquedos.
+        </p>
+    </section>
+
+    <section class="info">
+        <h2>Saúde e cuidados</h2>
+        <p>
+            Nina foi encontrada sozinha em uma caixa de papelão
+            próxima a uma praça, ainda muito pequena e precisando
+            de cuidados. Desde que chegou ao abrigo, vem demonstrando
+            sua personalidade curiosa e divertida. Gosta de explorar
+            cada cantinho, brincar com bolinhas e perseguir brinquedos.
+            Precisa de acompanhamento veterinário, vacinação e
+            vermifugação adequadas à sua idade, além da avaliação
+            para castração no momento indicado pelo veterinário.
+        </p>
+    </section>
+
+    <section class="info">
+        <h2>Sobre a adoção</h2>
+        <p>
+            Nina procura uma família que ofereça carinho, proteção,
+            brincadeiras e um lar seguro para acompanhar seu crescimento.
+            Ela merece crescer cercada de amor! 💚
+        </p>
+    </section>
+
+    <a href="formulario.html" class="botao">
+        Tenho interesse em adotar ❤️
+    </a>
+
+    <a href="adoções.html" botao voltar">
+        Voltar para os animais
+    </a>
+
+</main>
+
+<footer>
+    © 2026 Pulso Verde - Proteção Animal e Tecnologia 🐾
+</footer>
+
+<script src="temaescuro.js"></script>
+
+</body>
+</html>

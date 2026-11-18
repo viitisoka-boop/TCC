@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quero Ajudar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #0b2c17;
+        }
+
+        
+
+        header {
+            background-color: white;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        nav a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+        
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .introducao h1 {
+            font-family: 'Bree Serif', serif;
+            color: #0b2c17;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .introducao p {
+            color: #5b8f5e;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fafff9;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #d5e8d5;
+            box-shadow: 0 3px 8px rgba(11, 44, 23, 0.08);
+        }
+
+        .card h2 {
+            font-family: 'Bree Serif', serif;
+            color: #0b2c17;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #315b38;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            color: #315b38;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        
+
+        .aviso {
+            background-color: #e4f2e4;
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .aviso h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .aviso p {
+            color: #315b38;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        
+
+        .financeira {
+            background-color: #fafff9;
+            border: 1px solid #d5e8d5;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .financeira h2 {
+            font-family: 'Bree Serif', serif;
+            color: #0b2c17;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .financeira p {
+            color: #315b38;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .pix {
+            background-color: #e5f1e3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: #0b2c17;
+            font-weight: 600;
+        }
+
+       
+
+        footer {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+       
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode header {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2 {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #9bc69e;
+        }
+
+        .dark-mode nav a {
+            color: #b4d9b6;
+        }
+
+        .dark-mode nav a:hover {
+            background-color: #354b39;
+            color: white;
+        }
+
+        .dark-mode .container {
+            background-color: #202f24;
+        }
+
+        .dark-mode .introducao h1,
+        .dark-mode .card h2,
+        .dark-mode .aviso h2,
+        .dark-mode .financeira h2 {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .introducao p,
+        .dark-mode .card p,
+        .dark-mode .card ul,
+        .dark-mode .aviso p,
+        .dark-mode .financeira p {
+            color: #d0dfd1;
+        }
+
+        .dark-mode .card,
+        .dark-mode .financeira {
+            background-color: #263b2c;
+            border-color: #405c45;
+        }
+
+        .dark-mode .aviso {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .pix {
+            background-color: #354b39;
+            color: #e5eee6;
+        }
+
+        .dark-mode footer {
+            background-color: #202f24;
+            color: #b4d9b6;
+        }
+
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            .introducao h1 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+
+            <h1>O QUE DOAR?</h1>
+
+            <p>
+                Existem várias maneiras de ajudar os animais que precisam.
+                Sua contribuição pode fazer a diferença na vida de muitos deles.
+                Confira alguns itens que podem ser doados.
+            </p>
+
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h2>🐶 Rações e alimentos</h2>
+
+                <p>
+                    A alimentação é uma das principais necessidades
+                    dos animais acolhidos por instituições e ONGs.
+                </p>
+
+                <ul>
+                    <li>Ração para cães e gatos;</li>
+                    <li>Ração para filhotes;</li>
+                    <li>Petiscos;</li>
+                    <li>Alimentos próprios para animais.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>🧼 Produtos de limpeza</h2>
+
+                <p>
+                    Os produtos de limpeza ajudam a manter os espaços
+                    dos animais limpos e organizados.
+                </p>
+
+                <ul>
+                    <li>Desinfetantes próprios para ambientes com animais;</li>
+                    <li>Detergentes;</li>
+                    <li>Água sanitária;</li>
+                    <li>Sacos de lixo;</li>
+                    <li>Panos e materiais de limpeza.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>💊 Medicamentos e cuidados</h2>
+
+                <p>
+                    Alguns materiais são importantes para os cuidados
+                    com a saúde e o bem-estar dos animais.
+                </p>
+
+                <ul>
+                    <li>Gazes e algodão;</li>
+                    <li>Ataduras;</li>
+                    <li>Produtos de higiene animal;</li>
+                    <li>Medicamentos somente com orientação veterinária.</li>
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h2>🧸 Outros itens</h2>
+
+                <p>
+                    Outros objetos também podem ajudar a melhorar
+                    o conforto dos animais.
+                </p>
+
+                <ul>
+                    <li>Cobertores e mantas;</li>
+                    <li>Caminhas;</li>
+                    <li>Brinquedos;</li>
+                    <li>Coleiras e guias;</li>
+                    <li>Potes de água e comida.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="financeira">
+
+            <h2>💚 DOAÇÃO FINANCEIRA</h2>
+
+            <p>
+                Também é possível contribuir com valores em dinheiro.
+                Essa ajuda pode ser utilizada pelas instituições para
+                comprar alimentos, medicamentos e outros materiais
+                necessários para os animais.
+            </p>
+
+            <div class="pix">
+                PIX: (61)993969527
+            </div>
+
+        </section>
+
+        <section class="aviso">
+
+            <h2>ANTES DE DOAR</h2>
+
+            <p>
+                Antes de realizar uma doação, verifique se os produtos
+                estão em boas condições e dentro do prazo de validade.
+                Entre em contato com a instituição para confirmar quais
+                itens estão sendo necessários no momento e combinar
+                a entrega dos materiais.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Início</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #0b2c17;
+            transition: 0.3s;
+        }
+
+       
+
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+        
+
+        #btnTema {
+            background-color: #5b8f5e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #btnTema:hover {
+            background-color: #0b2c17;
+        }
+
+       
+
+        .principal {
+            background-color: #e5f1e3;
+            padding: 65px 8%;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .principal-texto {
+            flex: 1;
+        }
+
+        .principal-texto h1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 45px;
+            line-height: 1.2;
+            color: #0b2c17;
+            margin-bottom: 20px;
+        }
+
+        .principal-texto h1 span {
+            color: #5b8f5e;
+        }
+
+        .principal-texto p {
+            color: #476b4b;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #5b8f5e;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #0b2c17;
+        }
+
+        .principal-imagem {
+            flex: 1;
+        }
+
+        .principal-imagem img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 45% 45% 18px 18px;
+        }
+
+        
+
+        .sobre {
+            background-color: #ffffff;
+            padding: 55px 10%;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .sobre p {
+            max-width: 800px;
+            margin: auto;
+            color: #5b8f5e;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        
+
+        .ajuda {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .ajuda h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .ajuda-subtitulo {
+            color: #355d3b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .opcoes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .opcao {
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+            transition: 0.3s;
+        }
+
+        .opcao:hover {
+            transform: translateY(-5px);
+        }
+
+        .opcao img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .opcao-conteudo {
+            padding: 20px;
+        }
+
+        .opcao h3 {
+            font-family: 'Bree Serif', serif;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .opcao p {
+            color: #5b8f5e;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .opcao a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .opcao a:hover {
+            color: #5b8f5e;
+        }
+
+
+        .mensagem {
+            background-color: #e5f1e3;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .mensagem h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .mensagem p {
+            color: #476b4b;
+            font-size: 14px;
+        }
+
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5f1e3;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #203629;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5f1e3;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #91c794;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #355d3b;
+            color: white;
+        }
+
+        .dark-mode .principal,
+        .dark-mode .mensagem {
+            background-color: #263b2b;
+        }
+
+        .dark-mode .principal-texto h1,
+        .dark-mode .sobre h2,
+        .dark-mode .ajuda h2,
+        .dark-mode .mensagem h2,
+        .dark-mode .opcao h3 {
+            color: #e5f1e3;
+        }
+
+        .dark-mode .principal-texto h1 span {
+            color: #91c794;
+        }
+
+        .dark-mode .principal-texto p,
+        .dark-mode .mensagem p,
+        .dark-mode .ajuda-subtitulo {
+            color: #c0d8c2;
+        }
+
+        .dark-mode .sobre {
+            background-color: #203629;
+        }
+
+        .dark-mode .sobre p {
+            color: #b8d5bb;
+        }
+
+        .dark-mode .opcao {
+            background-color: #203629;
+        }
+
+        .dark-mode .opcao p {
+            color: #b8d5bb;
+        }
+
+        .dark-mode .opcao a {
+            color: #91c794;
+        }
+
+        .dark-mode .rodape {
+            background-color: #203629;
+            color: #e5f1e3;
+        }
+
+        .dark-mode #btnTema {
+            background-color: #91c794;
+            color: #0b2c17;
+        }
+
+        .dark-mode #btnTema:hover {
+            background-color: #e5f1e3;
+        }
+
+        @media (max-width: 850px) {
+
+            .cabecalho {
+                flex-direction: column;
+            }
+
+            .principal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .opcoes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 2px 0;
+            }
+
+            .principal {
+                padding: 40px 20px;
+            }
+
+            .principal-texto h1 {
+                font-size: 34px;
+            }
+
+            .principal-imagem img {
+                height: 250px;
+            }
+
+            .sobre {
+                padding: 40px 22px;
+            }
+
+            .ajuda {
+                padding: 40px 20px;
+            }
+
+            .opcoes {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+        <button type="button" id="btnTema" onclick="alternarModoEscuro()">
+            Alternar Tema
+        </button>
+
+    </header>
+
+
+    <section class="principal">
+
+        <div class="principal-texto">
+
+            <h1>
+                Um mundo melhor começa com
+                <span>pequenos gestos.</span>
+            </h1>
+
+            <p>
+                Todo animal merece carinho, respeito e proteção.
+                No Pulso Verde, você encontra maneiras de ajudar,
+                adotar e conhecer mais sobre os direitos dos animais.
+            </p>
+
+            <a href="adoções.html" class="botao">
+                ENCONTRE UM COMPANHEIRO
+            </a>
+
+        </div>
+
+        <div class="principal-imagem">
+
+            <img src="petz.png"
+            alt="Cachorro recebendo carinho">
+
+        </div>
+
+    </section>
+
+
+    <section class="sobre">
+
+        <h2>SEJA BEM-VINDO AO PULSO VERDE!</h2>
+
+        <p>
+            Somos uma plataforma criada para incentivar a proteção animal
+            por meio da tecnologia. Reunimos informações sobre adoção,
+            doações, denúncias de maus-tratos e leis, aproximando pessoas
+            que desejam ajudar dos animais que precisam de cuidado.
+            Acreditamos que todos podem contribuir para um futuro melhor.
+        </p>
+
+    </section>
+
+
+    <section class="ajuda">
+
+        <h2>COMO VOCÊ PODE AJUDAR?</h2>
+
+        <p class="ajuda-subtitulo">
+            Existem várias formas de fazer a diferença na vida de um animal.
+        </p>
+
+        <div class="opcoes">
+
+            <div class="opcao">
+
+                <img src="pets.png"
+                alt="Cachorro para adoção">
+
+                <div class="opcao-conteudo">
+
+                    <h3>Adoção</h3>
+
+                    <p>
+                        Dê uma nova oportunidade a um animal e encontre
+                        um amigo para toda a vida.
+                    </p>
+
+                    <a href="adoções.html">CONHECER ANIMAIS →</a>
+
+                </div>
+
+            </div>
+
+            <div class="opcao">
+
+                <img src="oi.png"
+                alt="Pessoa cuidando de um cachorro">
+
+                <div class="opcao-conteudo">
+
+                    <h3>Doações</h3>
+
+                    <p>
+                        Contribua com alimentos, medicamentos e outros
+                        itens importantes para os animais.
+                    </p>
+
+                    <a href="doações.html">QUERO AJUDAR →</a>
+
+                </div>
+
+            </div>
+
+            <div class="opcao">
+
+                <img src="tigre.png"
+                alt="Cães juntos">
+
+                <div class="opcao-conteudo">
+
+                    <h3>Denúncias</h3>
+
+                    <p>
+                        Saiba como agir ao presenciar situações de
+                        abandono ou maus-tratos.
+                    </p>
+
+                    <a href="denúncias.html">SAIBA MAIS →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="mensagem">
+
+        <h2>Todo cuidado faz a diferença. 💚</h2>
+
+        <p>
+            Juntos, podemos construir um futuro com mais respeito e proteção aos animais.
+        </p>
+
+    </section>
+
+
+    <footer class="rodape">
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+    </footer>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Adoção</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8f3;
+    color: #263b2b;
+}
+
+header {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1, h2, .logo {
+    font-family: 'Bree Serif', serif;
+}
+
+.logo {
+    color: #0b2c17;
+    font-size: 25px;
+}
+
+nav a {
+    color: #0b2c17;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #5b8f5e;
+}
+
+.banner, footer {
+    background: #5b8f5e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+form {
+    background: white;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.animal {
+    background: #e5f0e2;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd8ca;
+    border-radius: 7px;
+    font-family: inherit;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #5b8f5e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #0b2c17;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #5b8f5e;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: #0b2c17;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+/* MODO ESCURO */
+body.dark-mode {
+    background: #17251b;
+    color: #e5eee6;
+}
+
+.dark-mode header {
+    background: #202f24;
+}
+
+.dark-mode .logo,
+.dark-mode nav a {
+    color: #b4d9b6;
+}
+
+.dark-mode nav a:hover {
+    color: #ffffff;
+}
+
+.dark-mode form {
+    background: #263b2c;
+    color: #e5eee6;
+}
+
+.dark-mode .animal {
+    background: #354b39;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #202f24;
+    color: #e5eee6;
+    border-color: #536b57;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #b4c5b6;
+}
+
+.dark-mode .voltar {
+    color: #b4d9b6;
+}
+
+.dark-mode .voltar:hover {
+    color: white;
+}
+
+.dark-mode .banner,
+.dark-mode footer {
+    background: #263b2c;
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header {
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🐾 PULSO VERDE</div>
+
+    <nav>
+        <a href="inicial.html">INÍCIO</a>
+        <a href="adoções.html">ADOÇÃO</a>
+        <a href="doações.html">DOAÇÕES</a>
+        <a href="denuncias.html">DENÚNCIAS</a>
+        <a href="leis.html">LEIS</a>
+        <a href="mais.html">MAIS INFORMAÇÔES</a>
+        <a href="pessoa.html">MEU PERFIL</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Ficha de Interesse na Adoção 🐶</h1>
+    <p>Um novo amigo espera por você!</p>
+</section>
+
+<form id="formAdocao">
+
+    <h2>Preencha seus dados</h2>
+
+    <label>Nome completo:</label>
+    <input type="text" required placeholder="Seu nome">
+
+    <label>E-mail:</label>
+    <input type="email" required placeholder="Seu e-mail">
+
+    <label>Telefone:</label>
+    <input type="tel" required placeholder="Seu telefone">
+
+    <label>Cidade:</label>
+    <input type="text" required placeholder="Sua cidade">
+
+    <label>Tipo de moradia:</label>
+    <select required>
+        <option value="">Selecione</option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+    </select>
+
+    <label>Já teve animais?</label>
+    <select required>
+        <option value="">Selecione</option>
+        <option>Sim</option>
+        <option>Não</option>
+    </select>
+
+    <label>Por que deseja adotar?</label>
+    <textarea required placeholder="Conte um pouco..."></textarea>
+
+    <button type="submit">Enviar interesse ❤️</button>
+
+    <a href="adoções.html" class="voltar">
+        ← Voltar para a página inicial
+    </a>
+
+</form>
+
+<footer>
+    © 2026 Pulso Verde - Proteção Animal e Tecnologia 🐾
+</footer>
+
+<script>
+const parametros = new URLSearchParams(window.location.search);
+const animal = parametros.get("animal");
+
+if (animal) {
+    document.getElementById("nomeAnimal").textContent = animal;
+}
+
+document.getElementById("formAdocao").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Seu interesse na adoção foi registrado! Obrigado por apoiar o Pulso Verde. 💚");
+});
+</script>
+
+<script src="temaescuro.js"></script>
+
+</body>
+</html>

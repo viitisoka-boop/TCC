@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #71a679;
+        }
+
+       
+
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .introducao h1 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .introducao p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #71a679;
+        }
+
+
+        .perfil {
+            background-color: #fafff9;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+            text-align: center;
+        }
+
+        .foto-perfil {
+            width: 100px;
+            height: 100px;
+            background-color: #e5f1e3;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .perfil h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .usuario {
+            color: #5b8f5e;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+
+        .dados {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .dados h3 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .linha {
+            display: flex;
+            gap: 18px;
+        }
+
+        .campo {
+            flex: 1;
+            margin-bottom: 18px;
+        }
+
+        .campo label {
+            display: block;
+            color: #0b2c17;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .campo input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b7d6b8;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            background-color: #ffffff;
+            color: #0b2c17;
+            outline: none;
+        }
+
+        .campo input:focus {
+            border-color: #5b8f5e;
+        }
+
+        .campo input:read-only {
+            background-color: #f0f5ef;
+        }
+
+        
+
+        .botoes {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .botao {
+            flex: 1;
+            background-color: #0b2c17;
+            color: #ffffff;
+            border: none;
+            padding: 13px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #5b8f5e;
+        }
+
+        .cancelar {
+            background-color: #8b9b8b;
+        }
+
+        
+
+        .privacidade {
+            margin-top: 25px;
+            padding: 22px;
+            background-color: #e5f1e3;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .privacidade h3 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .privacidade p {
+            color: #315b38;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .mensagem {
+            display: none;
+            color: #315b38;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #a8c9aa;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #354b39;
+            color: #b4d9b6;
+        }
+
+        .dark-mode .container {
+            background-color: #202f24;
+        }
+
+        .dark-mode .introducao h1,
+        .dark-mode .perfil h2,
+        .dark-mode .dados h3,
+        .dark-mode .privacidade h3 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .introducao p,
+        .dark-mode .usuario {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .perfil {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .foto-perfil {
+            background-color: #354b39;
+        }
+
+        .dark-mode .campo label {
+            color: #e5eee6;
+        }
+
+        .dark-mode .campo input {
+            background-color: #202f24;
+            border-color: #58765d;
+            color: #e5eee6;
+        }
+
+        .dark-mode .campo input:read-only {
+            background-color: #354b39;
+        }
+
+        .dark-mode .campo input:focus {
+            border-color: #a8c9aa;
+        }
+
+        .dark-mode .botao {
+            background-color: #9bc69e;
+            color: #17251b;
+        }
+
+        .dark-mode .botao:hover {
+            background-color: #b4d9b6;
+        }
+
+        .dark-mode .cancelar {
+            background-color: #647a68;
+            color: #ffffff;
+        }
+
+        .dark-mode .privacidade {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .privacidade p,
+        .dark-mode .mensagem {
+            color: #c1d5c3;
+        }
+
+        .dark-mode .rodape {
+            background-color: #202f24;
+            color: #e5eee6;
+        }
+
+        
+
+        @media (max-width: 600px) {
+
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            .introducao h1 {
+                font-size: 32px;
+            }
+
+            .linha {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .botoes {
+                flex-direction: column;
+            }
+
+            .perfil {
+                padding: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+    
+
+    <main class="container">
+
+        <section class="introducao">
+
+            <h1>MEU PERFIL</h1>
+
+            <p>
+                Confira suas informações pessoais e mantenha
+                seus dados atualizados.
+            </p>
+
+        </section>
+
+
+        <section class="perfil">
+
+            <div class="foto-perfil">
+                👤
+            </div>
+
+            <h2>Isabela de Almeida Oliveira</h2>
+
+            <p class="usuario">@isabelaalmeida</p>
+
+
+            <div class="dados">
+
+                <h3>INFORMAÇÕES PESSOAIS</h3>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Nome completo</label>
+                        <input type="text" value="Isabela de Almeida Oliveira" readonly>
+                    </div>
+
+                    <div class="campo">
+                        <label>Nome de usuário</label>
+                        <input type="text" value="isabelaalmeida" readonly>
+                    </div>
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>E-mail</label>
+                        <input type="email" value="isabela@email.com" readonly>
+                    </div>
+
+                    <div class="campo">
+                        <label>Telefone</label>
+                        <input type="tel" value="6190872345" readonly>
+                    </div>
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Cidade</label>
+                        <input type="text" value="Luziânia - GO" readonly>
+                    </div>
+
+                    <div class="campo">
+                        <label>Data de cadastro</label>
+                        <input type="text" value="15/08/2026" readonly>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <button type="button" class="botao" id="editar">
+                    EDITAR PERFIL
+                </button>
+
+                <button type="button" class="botao cancelar" id="salvar" style="display: none;">
+                    SALVAR ALTERAÇÕES
+                </button>
+
+            </div>
+
+            <p class="mensagem" id="mensagem">
+                Alterações realizadas com sucesso!
+            </p>
+
+        </section>
+
+        <section class="privacidade">
+
+            <h3>🔒 PRIVACIDADE E PROTEÇÃO DE DADOS</h3>
+
+            <p>
+                O Pulso Verde valoriza sua privacidade e busca proteger
+                suas informações pessoais. Seus dados devem ser utilizados
+                apenas para finalidades relacionadas ao funcionamento
+                da plataforma, respeitando a Lei Geral de Proteção de Dados
+                (LGPD).
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script>
+
+        const campos = document.querySelectorAll(".dados input");
+        const botaoEditar = document.getElementById("editar");
+        const botaoSalvar = document.getElementById("salvar");
+        const mensagem = document.getElementById("mensagem");
+
+        botaoEditar.addEventListener("click", function() {
+
+            campos.forEach(function(campo) {
+                campo.removeAttribute("readonly");
+            });
+
+
+            botaoEditar.style.display = "none";
+            botaoSalvar.style.display = "block";
+            mensagem.style.display = "none";
+
+        });
+
+        botaoSalvar.addEventListener("click", function() {
+
+            campos.forEach(function(campo) {
+                campo.setAttribute("readonly", true);
+            });
+
+            botaoEditar.style.display = "block";
+            botaoSalvar.style.display = "none";
+            mensagem.style.display = "block";
+
+        });
+
+    </script>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+</html>
+

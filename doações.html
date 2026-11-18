@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doações</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #0b2c17;
+        }
+
+      
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+       
+
+        .principal {
+            background-color: #e5f1e3;
+            padding: 55px 8%;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .principal-texto {
+            flex: 1;
+        }
+
+        .principal-texto h1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 42px;
+            line-height: 1.2;
+            color: #0b2c17;
+            margin-bottom: 18px;
+        }
+
+        .principal-texto h1 span {
+            color: #5b8f5e;
+        }
+
+        .principal-texto p {
+            color: #476b4b;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .principal-imagem {
+            flex: 1;
+        }
+
+        .principal-imagem img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+       
+
+        .ajuda {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .ajuda h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #0b2c17;
+        }
+
+        .ajuda-subtitulo {
+            color: #355d3b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .opcoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 28px 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #fafff9;
+            box-shadow: 0 7px 18px rgba(11, 44, 23, 0.16);
+        }
+
+        .icone {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-family: 'Bree Serif', serif;
+            font-size: 19px;
+            color: #0b2c17;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #5b8f5e;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        
+
+        .pix {
+            background-color: #ffffff;
+            padding: 35px 25px;
+            text-align: center;
+            margin: 0 auto 30px;
+            max-width: 1050px;
+            width: 84%;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .pix h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 28px;
+            color: #0b2c17;
+            margin-bottom: 10px;
+        }
+
+        .pix p {
+            color: #5b8f5e;
+            font-size: 14px;
+            margin: 8px 0 20px;
+        }
+
+        .chave {
+            padding: 15px;
+            background-color: #f4f8f1;
+            border: 1px solid #d5e6d2;
+            border-radius: 9px;
+            color: #0b2c17;
+            font-weight: 600;
+            margin: 0 auto 20px;
+            max-width: 400px;
+            overflow-wrap: anywhere;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #5b8f5e;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #0b2c17;
+        }
+
+        
+
+        .transparencia {
+            background-color: #ffffff;
+            padding: 35px 25px;
+            text-align: center;
+            margin: 0 auto 45px;
+            max-width: 1050px;
+            width: 84%;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .transparencia h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 25px;
+            color: #0b2c17;
+            margin-bottom: 12px;
+        }
+
+        .transparencia p {
+            color: #5b8f5e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+     
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #9bc69e;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #354b39;
+            color: #b4d9b6;
+        }
+
+        .dark-mode .principal {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .principal-texto h1,
+        .dark-mode .ajuda h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .principal-texto h1 span {
+            color: #a5cfa7;
+        }
+
+        .dark-mode .principal-texto p {
+            color: #c0d5c2;
+        }
+
+        .dark-mode .ajuda-subtitulo {
+            color: #c0d5c2;
+        }
+
+        .dark-mode .card,
+        .dark-mode .pix,
+        .dark-mode .transparencia {
+            background-color: #263b2c;
+            color: #e5eee6;
+        }
+
+        .dark-mode .card h3,
+        .dark-mode .pix h2,
+        .dark-mode .transparencia h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .card p,
+        .dark-mode .pix p,
+        .dark-mode .transparencia p {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .card:hover {
+            background-color: #354b39;
+        }
+
+        .dark-mode .chave {
+            background-color: #17251b;
+            border-color: #49694d;
+            color: #e5eee6;
+        }
+
+        .dark-mode .botao:hover {
+            background-color: #49694d;
+        }
+
+        .dark-mode .rodape {
+            background-color: #202f24;
+            color: #e5eee6;
+        }
+
+       
+        @media (max-width: 850px) {
+
+            .cabecalho {
+                flex-direction: column;
+            }
+
+            .principal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .principal-imagem img {
+                height: 300px;
+            }
+
+            .opcoes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+      
+
+        @media (max-width: 600px) {
+
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .logo-texto h2 {
+                font-size: 22px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 2px 0;
+            }
+
+            .principal {
+                padding: 40px 20px;
+            }
+
+            .principal-texto h1 {
+                font-size: 34px;
+            }
+
+            .principal-imagem img {
+                height: 250px;
+            }
+
+            .ajuda {
+                padding: 40px 20px;
+            }
+
+            .ajuda h2 {
+                font-size: 27px;
+            }
+
+            .opcoes {
+                grid-template-columns: 1fr;
+            }
+
+            .pix,
+            .transparencia {
+                width: 90%;
+                padding: 25px 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+   
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+
+
+    <section class="principal">
+
+        <div class="principal-texto">
+
+            <h1>
+                Sua ajuda transforma
+                <span>vidas!</span>
+            </h1>
+
+            <p>
+                Sua ajuda faz toda a diferença!
+            </p>
+
+            <p>
+                Com sua doação, garantimos alimentação,
+                cuidados médicos, abrigo e muito amor
+                para os animais que precisam.
+            </p>
+
+        </div>
+
+        <div class="principal-imagem">
+            <img src="neneco.png" alt="Animais">
+        </div>
+
+    </section>
+
+    
+    <section class="ajuda">
+
+        <h2>COMO DOAR?</h2>
+
+        <p class="ajuda-subtitulo">
+            Existem várias formas de ajudar e fazer a diferença na vida dos animais.
+        </p>
+
+        <div class="opcoes">
+
+            <div class="card">
+                <div class="icone">💚</div>
+                <h3>DOAÇÃO FINANCEIRA</h3>
+                <p>Qualquer valor ajuda nossos animais.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">🐾</div>
+                <h3>RAÇÃO</h3>
+                <p>Doe ração para cães e gatos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">💊</div>
+                <h3>MEDICAMENTOS</h3>
+                <p>Doe medicamentos e curativos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">🧴</div>
+                <h3>LIMPEZA</h3>
+                <p>Produtos de limpeza também ajudam.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="pix">
+
+        <h2>CHAVE PIX</h2>
+
+        <p>
+            Faça sua contribuição de forma rápida e segura.
+        </p>
+
+        <div class="chave">
+            (61)99396-9527
+        </div>
+
+        <a href="quero.html" class="botao">
+            QUERO AJUDAR
+        </a>
+
+    </section>
+
+    
+
+    <section class="transparencia">
+
+        <h2>TRANSPARÊNCIA</h2>
+
+        <p>
+            Prestamos contas das doações recebidas,
+            clique na aba "mais informações".
+        </p>
+
+    </section>
+
+    
+    <footer class="rodape">
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+</html>

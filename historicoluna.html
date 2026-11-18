@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico da Luna</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f8f3;
+            color: #263b2b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .logo, h1, h2 {
+            font-family: 'Bree Serif', serif;
+            color: #0b2c17;
+        }
+
+        nav a {
+            color: #0b2c17;
+            text-decoration: none;
+            margin: 8px;
+            font-size: 13px;
+        }
+
+        .banner {
+            background: #5b8f5e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .banner h1 {
+            color: white;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .perfil {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .info {
+            background: #e5f0e2;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .botao {
+            display: block;
+            background: #5b8f5e;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 7px;
+            margin-top: 20px;
+        }
+
+        .botao:hover {
+            background: #0b2c17;
+        }
+
+        .voltar {
+            background: #0b2c17;
+        }
+
+        footer {
+            background: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 25px;
+            margin-top: auto;
+        }
+
+
+        body.dark-mode {
+            background: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode header {
+            background: #202f24;
+        }
+
+        .dark-mode .logo,
+        .dark-mode nav a {
+            color: #b4d9b6;
+        }
+
+        .dark-mode nav a:hover {
+            color: white;
+        }
+
+        .dark-mode .banner {
+            background: #263b2c;
+        }
+
+        .dark-mode .perfil {
+            background: #263b2c;
+            color: #e5eee6;
+        }
+
+        .dark-mode .info {
+            background: #263b2c;
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo,
+        .dark-mode h2 {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .botao {
+            background: #5b8f5e;
+            color: white;
+        }
+
+        .dark-mode .botao:hover {
+            background: #354b39;
+        }
+
+        .dark-mode .voltar {
+            background: #354b39;
+        }
+
+        .dark-mode footer {
+            background: #202f24;
+            color: #e5eee6;
+        }
+
+        @media (max-width: 600px) {
+            .perfil {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🐾 PULSO VERDE</div>
+
+    <nav>
+        <a href="inicial.html">INÍCIO</a>
+        <a href="adoções.html">ADOÇÃO</a>
+        <a href="doacao.html">DOAÇÕES</a>
+        <a href="denuncias.html">DENÚNCIAS</a>
+        <a href="leis.html">LEIS</a>
+        <a href="informacoes.html">MAIS INFORMAÇÕES</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Conheça a Luna 🐶</h1>
+    <p>Um pouquinho da história da nossa amiga!</p>
+</section>
+
+<main class="container">
+
+    <section class="perfil">
+        <div>
+            <h2>Luna</h2>
+            <p><strong>Espécie:</strong> Cachorro</p>
+            <p><strong>Idade:</strong> 2 anos</p>
+            <p><strong>Personalidade:</strong> Carinhosa e brincalhona.</p>
+            <p><strong>Localização:</strong> Luziânia - GO</p>
+        </div>
+    </section>
+
+    <section class="info">
+        <h2>Comportamento</h2>
+        <p>Luna é carinhosa, alegre e brincalhona. Gosta de atenção, companhia e momentos de diversão.</p>
+    </section>
+
+    <section class="info">
+        <h2>História e saúde</h2>
+        <p>Luna foi resgatada após uma denúncia de maus-tratos, pois vivia em condições inadequadas e sem os cuidados necessários. Apesar das dificuldades que enfrentou, continua sendo uma cachorrinha alegre, carinhosa e cheia de energia. Ainda não é castrada e precisa de acompanhamento veterinário, além da verificação das vacinas e vermifugação. Agora, espera encontrar uma família que ofereça amor, segurança e uma nova oportunidade de ser feliz. 💚</p>
+    </section>
+
+    <section class="info">
+        <h2>Sobre a adoção</h2>
+        <p>Luna procura uma família que ofereça carinho, atenção, cuidados e um lar cheio de amor.</p>
+    </section>
+
+    <a href="formulario.html" class="botao">
+        Tenho interesse em adotar ❤️
+    </a>
+
+    <a href="adoções.html" class="botao voltar">
+        Voltar para os animais
+    </a>
+
+</main>
+
+<footer>
+    © 2026 Pulso Verde - Proteção Animal e Tecnologia 🐾
+</footer>
+
+<script src="temaescuro.js"></script>
+
+</body>
+</html>

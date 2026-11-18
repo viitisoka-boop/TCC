@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Histórico da Luana</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8f3;
+    color: #0b2c17;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: white;
+    padding: 18px 5%;
+    box-shadow: 0 2px 8px rgba(11,44,23,0.12);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icone {
+    font-size: 35px;
+}
+
+.logo-texto h2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 24px;
+}
+
+.logo-texto p {
+    color: #5b8f5e;
+    font-size: 12px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 45px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Bree Serif', serif;
+    color: #5b8f5e;
+    margin: 20px 0 10px;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.info {
+    background: #e5f0e2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    background: #5b8f5e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background: #91c794;
+    color: #0b2c17;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* MODO ESCURO */
+
+body.dark-mode {
+    background: #17251b;
+    color: #e5eee6;
+}
+
+.dark-mode header {
+    background: #202f24;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dark-mode .logo-texto h2 {
+    color: #b4d9b6;
+}
+
+.dark-mode .logo-texto p {
+    color: #9bc69e;
+}
+
+.dark-mode .container {
+    background: #263b2c;
+    color: #e5eee6;
+}
+
+.dark-mode h1 {
+    color: #e5eee6;
+}
+
+.dark-mode h2 {
+    color: #b4d9b6;
+}
+
+.dark-mode .info {
+    background: #354b39;
+    color: #e5eee6;
+}
+
+.dark-mode footer {
+    background: #202f24;
+    color: #e5eee6;
+}
+
+.dark-mode .botao {
+    background: #5b8f5e;
+    color: white;
+}
+
+.dark-mode .botao:hover {
+    background: #354b39;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icone">🐾</div>
+        <div class="logo-texto">
+            <h2>PULSO VERDE</h2>
+            <p>Proteção Animal e Tecnologia</p>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <h1>Histórico da Luana 🐶</h1>
+
+    <div class="info">
+        <p><strong>Nome:</strong> Luna</p>
+        <p><strong>Espécie:</strong> Cachorro</p>
+        <p><strong>Idade:</strong> 2 anos</p>
+        <p><strong>Personalidade:</strong> Carinhosa e brincalhona</p>
+        <p><strong>Situação:</strong> Disponível para adoção</p>
+    </div>
+
+    <h2>Como Luana chegou à instituição?</h2>
+
+    <p>
+        Luana foi encontrada abandonada e sem companhia.
+        Após ser acolhida pela instituição, recebeu um espaço seguro
+        e os cuidados necessários para se recuperar.
+    </p>
+
+    <h2>Cuidados recebidos</h2>
+
+    <p>
+        Ela recebeu alimentação, água, abrigo e atenção.
+        Também passou por avaliação veterinária para verificar
+        sua saúde e garantir seu bem-estar.
+    </p>
+
+    <h2>Personalidade</h2>
+
+    <p>
+        Luana é uma cachorra carinhosa e brincalhona.
+        Gosta de receber carinho e estar perto das pessoas.
+        Ela procura uma família responsável que possa oferecer
+        amor, atenção e um lar seguro.
+    </p>
+
+    <a href="formulario.html" class="botao">
+        Tenho interesse em adotar ❤️
+    </a>
+
+    <a href="adoções.html" class="botao">VOLTAR PARA ADOÇÃO</a>
+
+</main>
+
+<footer>
+    <p>© 2026 Pulso Verde - Proteção Animal e Tecnologia</p>
+    <p>Adotar é um ato de amor!</p>
+</footer>
+
+<script src="temaescuro.js"></script>
+
+</body>
+</html>

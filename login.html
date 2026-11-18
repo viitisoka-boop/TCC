@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pulso Verde - Proteção Animal e Tecnologia</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #91c794;
+    font-family: 'Poppins', sans-serif;
+    color: #71a679;
+    width: 100%;
+    min-height: 100%;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: #CDEBCB;
+    border-radius: 50%;
+    right: -260px;
+    bottom: -250px;
+    opacity: .55;
+    z-index: -1;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    gap: 25px;
+}
+
+.hero-left {
+    flex: 1;
+    min-width: 0;
+    max-width: 790px;
+    padding-left: 35px;
+}
+
+.hero-left h1 {
+    font-size: 56px;
+    line-height: 1.14;
+    color: #145A32;
+    margin-top: 10px;
+}
+
+.hero-left p {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #555;
+    line-height: 1.75;
+    max-width: 620px;
+}
+
+.heart-icon {
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.animals-banner {
+    position: relative;
+    width: 100%;
+    height: 390px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.img-pets {
+    position: relative;
+    width: 550px;
+    max-width: 95%;
+    left: 20px;
+    display: block;
+    border-radius: 30px;
+}
+
+.login-right {
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.login-card {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 40px 34px 34px;
+    border-radius: 28px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.10);
+}
+
+.login-card h2 {
+    color: #145A32;
+    text-align: center;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 12px;
+}
+
+.login-card .linha {
+    width: 60px;
+    height: 4px;
+    background: #2E7D32;
+    border-radius: 20px;
+    margin: 0 auto 17px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    width: 100%;
+    height: 58px;
+    background: #FFFFFF;
+    border: 1.5px solid #CFCFCF;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: .3s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #68A872;
+    box-shadow: 0 0 0 4px rgba(46,125,50,.08);
+}
+
+.input-icon {
+    color: #4F8E59;
+    font-size: 18px;
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 15px;
+}
+
+.input-wrapper input::placeholder {
+    color: #999;
+}
+
+.campo-senha {
+    position: relative;
+    width: 100%;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.btn-olho {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #17683d;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.btn-olho:hover {
+    color: #0b4b2b;
+}
+
+.forgot-password-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -7px;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: #17683B;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.entrar {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 14px;
+    background: #17683B;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(46,125,50,.22);
+    transition: .3s;
+}
+
+.entrar:hover {
+    background: #12552F;
+    transform: translateY(-2px);
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 26px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: #DDDDDD;
+}
+
+.divider p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+.btn-google {
+    width: 100%;
+    height: 55px;
+    border: 1.5px solid #BFC7BF;
+    background: #FFFFFF;
+    color: #333;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-google img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-google:hover {
+    background: #F7FAF7;
+    border-color: #92A692;
+    transform: translateY(-2px);
+}
+
+.termo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+}
+
+.termo input {
+    accent-color: #17683d;
+}
+
+.termo a {
+    color: #17683d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.termo a:hover {
+    text-decoration: underline;
+}
+
+.signup-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.signup-text a {
+    color: #17683B;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+#mensagemFeedback {
+    color: #17683d;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 0;
+    padding: 28px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #145A32;
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+
+    .content-container {
+        gap: 35px;
+    }
+
+    .hero-left {
+        padding-left: 15px;
+    }
+
+    .hero-left h1 {
+        font-size: 48px;
+    }
+
+    .img-pets {
+        width: 490px;
+    }
+
+    .login-right {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-top: 35px;
+    }
+
+    .hero-left {
+        width: 100%;
+        max-width: 760px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-left p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .animals-banner {
+        justify-content: center;
+    }
+
+    .img-pets {
+        left: 0;
+    }
+
+    .login-right {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-left h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .heart-icon {
+        font-size: 30px;
+    }
+
+    .animals-banner {
+        min-height: 280px;
+    }
+
+    .img-pets {
+        width: 390px;
+        max-width: 100%;
+        border-radius: 25px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+        border-radius: 24px;
+    }
+
+    .login-card h2 {
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .footer {
+        padding: 25px 20px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <main class="content-container">
+
+        <section class="hero-left">
+
+            <h1>
+                Juntos,<br>
+                transformamos vidas!
+                <span class="heart-icon">💚</span>
+            </h1>
+
+            <p>
+                Acreditamos que pequenas atitudes geram grandes mudanças.<br>
+                Faça parte dessa causa e ajude a construir um mundo melhor
+                para os animais e para o planeta.
+            </p>
+
+            <div class="animals-banner">
+
+                <img src="nenezinhos.png" Animais" class="img-pets">
+
+            </div>
+
+        </section>
+
+        <section class="login-right">
+
+            <div class="login-card">
+
+                <h2>Bem-vindo ao Pulso Verde!</h2>
+
+                <div class="linha"></div>
+
+                <p class="subtitle">
+                    Faça login para acessar sua conta.
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>E-mail</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope input-icon"></i>
+
+                            <input type="email" id="campoEmail"
+                                placeholder="Digite seu e-mail">
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>CPF:</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-id-card input-icon"></i>
+
+                            <input type="text" id="campoCPF"
+                                maxlength="14"
+                                placeholder="000.000.000-00"
+                                oninput="aplicarMascaraCPF(this)">
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Senha</label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock input-icon"></i>
+
+                            <div class="campo-senha">
+
+                                <input type="password" id="campoSenha"
+                                    placeholder="Digite sua senha">
+
+                                <button type="button" class="btn-olho"
+                                    onclick="mostrarSenha()"
+                                    aria-label="Mostrar senha">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="forgot-password-container">
+
+                        <a href="senha.html" class="forgot-password">
+                            Esqueceu sua senha?
+                        </a>
+
+                    </div>
+
+                    <button type="button" class="entrar" onclick="validarAcesso()">
+                        Entrar
+                    </button>
+
+                    <p id="mensagemFeedback"></p>
+
+                    <div class="divider">
+
+                        <span></span>
+
+                        <p>OU</p>
+
+                        <span></span>
+
+                    </div>
+
+                    <button type="button" class="btn-google"
+                        onclick="window.location.href='google.html'">
+
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                            alt="Google">
+
+                        Entrar com Google
+
+                    </button>
+
+                    <div class="termo">
+
+                        <input type="checkbox" id="termo">
+
+                        <label for="termo">
+                            Li e concordo com o
+                            <a href="termos.html">
+                                Termo de Responsabilidade
+                            </a>.
+                        </label>
+
+                    </div>
+
+                    <p class="signup-text">
+
+                        Ainda não tem uma conta?
+
+                        <a href="cadastre.html">Cadastre-se</a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>
+            ©️ 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+</div>
+
+<script>
+
+function validarAcesso() {
+
+    const email = document.getElementById("campoEmail").value.trim();
+    const cpf = document.getElementById("campoCPF").value;
+    const senha = document.getElementById("campoSenha").value;
+    const termo = document.getElementById("termo").checked;
+    const feedback = document.getElementById("mensagemFeedback");
+
+    if (email === "" || cpf === "" || senha === "") {
+        feedback.innerText = "Preencha todos os campos!";
+        return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        feedback.innerText = "Digite um e-mail válido!";
+        return;
+    }
+
+    if (cpf.replace(/\D/g, "").length !== 11) {
+        feedback.innerText = "Digite um CPF válido!";
+        return;
+    }
+
+    if (senha.length < 6) {
+        feedback.innerText = "A senha precisa ter pelo menos 6 caracteres!";
+        return;
+    }
+
+    if (!/\d/.test(senha)) {
+        feedback.innerText = "A senha deve conter pelo menos um número!";
+        return;
+    }
+
+    if (!termo) {
+        feedback.innerText = "Você precisa aceitar o Termo de Responsabilidade!";
+        return;
+    }
+
+    window.location.href = "inicial.html";
+}
+
+function mostrarSenha() {
+
+    const senha = document.getElementById("campoSenha");
+    const icone = document.querySelector(".btn-olho i");
+
+    if (senha.type === "password") {
+
+        senha.type = "text";
+        icone.classList.replace("fa-eye", "fa-eye-slash");
+
+    } else {
+
+        senha.type = "password";
+        icone.classList.replace("fa-eye-slash", "fa-eye");
+
+    }
+}
+
+function aplicarMascaraCPF(campo) {
+
+    let valor = campo.value.replace(/\D/g, "");
+
+    valor = valor.slice(0, 11);
+
+    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+    campo.value = valor;
+}
+
+</script>
+
+</body>
+</html>

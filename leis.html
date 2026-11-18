@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leis</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #0b2c17;
+        }
+
+
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+        .principal {
+            background-color: #e5f1e3;
+            padding: 55px 8%;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .principal-texto {
+            flex: 1;
+        }
+
+        .principal-texto h1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 42px;
+            color: #0b2c17;
+            margin-bottom: 18px;
+        }
+
+        .principal-texto p {
+            color: #476b4b;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .principal-imagem {
+            flex: 1;
+        }
+
+        .principal-imagem img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .leis {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .leis h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 32px;
+            color: #0b2c17;
+            margin-bottom: 30px;
+        }
+
+        .opcoes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 28px 18px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #fafff9;
+            box-shadow: 0 7px 18px rgba(11, 44, 23, 0.16);
+        }
+
+        .icone {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Bree Serif', serif;
+            font-size: 19px;
+            color: #0b2c17;
+            margin-bottom: 10px;
+        }
+
+        .card h4 {
+            font-size: 14px;
+            color: #5b8f5e;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #5b8f5e;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .card a {
+            display: inline-block;
+            background-color: #0b2c17;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #5b8f5e;
+        }
+
+
+        .importante {
+            background-color: #e5f1e3;
+            padding: 35px 8%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icone-importante {
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #52785d;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .importante h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+            color: #0b2c17;
+            margin-bottom: 8px;
+        }
+
+        .importante p {
+            color: #476b4b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .transparencia {
+            background-color: #ffffff;
+            width: 84%;
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .transparencia h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 25px;
+            color: #0b2c17;
+            margin-bottom: 10px;
+        }
+
+        .transparencia p {
+            color: #5b8f5e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #9bc69e;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #354b39;
+            color: #b4d9b6;
+        }
+
+        .dark-mode .principal,
+        .dark-mode .importante {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .principal-texto h1,
+        .dark-mode .leis h2,
+        .dark-mode .importante h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .principal-texto p,
+        .dark-mode .importante p {
+            color: #c0d5c2;
+        }
+
+        .dark-mode .card,
+        .dark-mode .transparencia {
+            background-color: #263b2c;
+            color: #e5eee6;
+        }
+
+        .dark-mode .card h3,
+        .dark-mode .transparencia h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .card h4,
+        .dark-mode .card p,
+        .dark-mode .transparencia p {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .card:hover {
+            background-color: #354b39;
+        }
+
+        .dark-mode .card a {
+            background-color: #91c794;
+            color: #0b2c17;
+        }
+
+        .dark-mode .card a:hover {
+            background-color: #b4d9b6;
+        }
+
+        .dark-mode .icone-importante {
+            background-color: #52785d;
+        }
+
+        .dark-mode .rodape {
+            background-color: #202f24;
+            color: #e5eee6;
+        }
+
+        @media (max-width: 850px) {
+            .cabecalho {
+                flex-direction: column;
+            }
+
+            .principal {
+                gap: 25px;
+            }
+
+            .principal-imagem img {
+                height: 300px;
+            }
+
+            .opcoes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .logo-texto h2 {
+                font-size: 22px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 2px 0;
+            }
+
+            .principal {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 7%;
+            }
+
+            .principal-texto h1 {
+                font-size: 32px;
+            }
+
+            .principal-imagem {
+                width: 100%;
+            }
+
+            .principal-imagem img {
+                height: 250px;
+            }
+
+            .opcoes {
+                grid-template-columns: 1fr;
+            }
+
+            .importante {
+                align-items: flex-start;
+                padding: 30px 7%;
+            }
+
+            .transparencia {
+                width: 90%;
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+
+    <section class="principal">
+
+        <div class="principal-texto">
+
+            <h1>LEIS</h1>
+
+            <p>
+                <strong>Conheça as leis que protegem os animais!</strong>
+            </p>
+
+            <p>
+                Os animais têm direitos e precisam ser protegidos.
+                Conhecer as leis é uma forma de combater os maus-tratos,
+                o abandono e a violência contra eles.
+            </p>
+
+        </div>
+
+        <div class="principal-imagem">
+            <img src="bebezinho.png" alt="Cachorrinho">
+        </div>
+
+    </section>
+
+
+    <section class="leis">
+
+        <h2>PRINCIPAIS LEIS</h2>
+
+        <div class="opcoes">
+
+            <div class="card">
+
+                <div class="icone">⚖️</div>
+
+                <h3>LEI Nº 9.605/1998</h3>
+
+                <h4>Lei de Crimes Ambientais</h4>
+
+                <p>
+                    Define crimes contra a fauna e a flora,
+                    incluindo maus-tratos contra animais.
+                </p>
+
+                <a href="https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+                    target="_blank" rel="noopener noreferrer">
+                    SAIBA MAIS →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icone">🐶</div>
+
+                <h3>LEI Nº 14.064/2020</h3>
+
+                <h4>Lei Sansão</h4>
+
+                <p>
+                    Aumenta a pena para crimes de maus-tratos
+                    contra cães e gatos.
+                </p>
+
+                <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14064.htm"
+                    target="_blank" rel="noopener noreferrer">
+                    SAIBA MAIS →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icone">📜</div>
+
+                <h3>CONSTITUIÇÃO FEDERAL</h3>
+
+                <h4>Artigo 225</h4>
+
+                <p>
+                    Estabelece o direito ao meio ambiente equilibrado
+                    e prevê a proteção da fauna.
+                </p>
+
+                <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+                    target="_blank" rel="noopener noreferrer">
+                    SAIBA MAIS →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="importante">
+
+        <div class="icone-importante">✓</div>
+
+        <div>
+
+            <h2>IMPORTANTE</h2>
+
+            <p>
+                Maus-tratos a animais é crime. Denuncie casos de abandono,
+                violência ou negligência aos órgãos responsáveis.
+                Se presenciar uma situação de risco, não se coloque
+                em perigo para registrar a ocorrência.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="transparencia">
+
+        <h2>PROTEÇÃO ANIMAL</h2>
+
+        <p>
+            A informação ajuda a conscientizar a população e a defender
+            os direitos dos animais. Conheça as leis, compartilhe
+            informações e ajude a combater os maus-tratos.
+        </p>
+
+    </section>
+
+
+    <footer class="rodape">
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+
+</html>

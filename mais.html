@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mais Informações</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #0b2c17;
+        }
+
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+
+        .principal {
+            background-color: #e5f1e3;
+            padding: 55px 8%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .principal-texto {
+            max-width: 850px;
+        }
+
+        .principal-texto h1 {
+            font-family: 'Bree Serif', serif;
+            font-size: 42px;
+            color: #0b2c17;
+            margin-bottom: 18px;
+        }
+
+        .principal-texto p {
+            color: #476b4b;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+
+        .secao {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .secao h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 32px;
+            color: #0b2c17;
+            margin-bottom: 15px;
+        }
+
+        .descricao {
+            color: #476b4b;
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 850px;
+            margin: 0 auto 30px;
+        }
+
+        .informacoes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 28px 18px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #fafff9;
+            box-shadow: 0 7px 18px rgba(11, 44, 23, 0.16);
+        }
+
+        .icone {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Bree Serif', serif;
+            font-size: 19px;
+            color: #0b2c17;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #5b8f5e;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .transparencia {
+            background-color: #e5f1e3;
+            padding: 45px 8%;
+            text-align: center;
+        }
+
+        .transparencia h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 30px;
+            color: #0b2c17;
+            margin-bottom: 15px;
+        }
+
+        .transparencia p {
+            color: #476b4b;
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+
+
+        .contato {
+            background-color: #ffffff;
+            width: 84%;
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .contato h2 {
+            font-family: 'Bree Serif', serif;
+            font-size: 30px;
+            color: #0b2c17;
+            margin-bottom: 15px;
+        }
+
+        .contato p {
+            color: #5b8f5e;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #0b2c17;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #5b8f5e;
+        }
+
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #a8c9aa;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #354b39;
+            color: #b4d9b6;
+        }
+
+        .dark-mode .principal,
+        .dark-mode .transparencia {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .principal-texto h1,
+        .dark-mode .secao h2,
+        .dark-mode .transparencia h2,
+        .dark-mode .contato h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .principal-texto p,
+        .dark-mode .descricao,
+        .dark-mode .transparencia p {
+            color: #c1d5c3;
+        }
+
+        .dark-mode .card,
+        .dark-mode .contato {
+            background-color: #202f24;
+        }
+
+        .dark-mode .card:hover {
+            background-color: #354b39;
+        }
+
+        .dark-mode .card h3 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .card p,
+        .dark-mode .contato p {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .botao {
+            background-color: #9bc69e;
+            color: #17251b;
+        }
+
+        .dark-mode .botao:hover {
+            background-color: #b4d9b6;
+        }
+
+        .dark-mode .rodape {
+            background-color: #202f24;
+            color: #e5eee6;
+        }
+
+        @media (max-width: 850px) {
+            .cabecalho {
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            .logo-texto h2 {
+                font-size: 22px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 2px 0;
+            }
+
+            .principal {
+                padding: 40px 7%;
+            }
+
+            .principal-texto h1 {
+                font-size: 32px;
+            }
+
+            .secao {
+                padding: 40px 7%;
+            }
+
+            .secao h2 {
+                font-size: 27px;
+            }
+
+            .informacoes {
+                grid-template-columns: 1fr;
+            }
+
+            .transparencia {
+                padding: 40px 7%;
+            }
+
+            .contato {
+                width: 90%;
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+
+    <section class="principal">
+
+        <div class="principal-texto">
+
+            <h1>MAIS INFORMAÇÕES</h1>
+
+            <p>
+                Quer conhecer melhor nosso trabalho?
+                Aqui você encontra informações sobre nossa
+                causa, nossas ações e formas de entrar em contato.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="secao">
+
+        <h2>ACOMPANHE NOSSO TRABALHO</h2>
+
+        <p class="descricao">
+            Nosso projeto busca incentivar o cuidado e o respeito
+            pelos animais. Acompanhe as novidades pelas redes sociais
+            e fique por dentro das iniciativas de proteção animal.
+        </p>
+
+        <div class="informacoes">
+
+            <div class="card">
+
+                <div class="icone">📢</div>
+
+                <h3>CAMPANHAS</h3>
+
+                <p>
+                    Fique por dentro de campanhas de arrecadação,
+                    ações solidárias e iniciativas de apoio
+                    aos animais.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <div class="icone">🐶</div>
+
+                <h3>HISTÓRIAS E NOVIDADES</h3>
+
+                <p>
+                    Acompanhe notícias, histórias de superação
+                    e novidades relacionadas à proteção
+                    e ao bem-estar animal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="transparencia">
+
+        <h2>PRESTAÇÃO DE CONTAS</h2>
+
+        <p>
+            A transparência é importante para que todos
+            saibam como as contribuições ajudam os animais.
+            Por isso, nossa proposta é divulgar informações
+            sobre as doações recebidas, os materiais
+            arrecadados e as ações realizadas.
+        </p>
+
+        <p>
+            Acompanhe nossas redes sociais para conferir
+            atualizações, campanhas e registros das
+            atividades do projeto.
+        </p>
+
+        <p>
+            Nosso compromisso é incentivar a responsabilidade,
+            a confiança e o cuidado com os animais.
+        </p>
+
+    </section>
+
+
+    <section class="contato">
+
+        <h2>FALE CONOSCO</h2>
+
+        <p>
+            Tem dúvidas, sugestões ou quer saber mais sobre o projeto?
+            Entre em contato conosco!
+        </p>
+
+        <p>
+            <strong>WhatsApp:</strong>
+            (SEU DDD) SEU NÚMERO
+        </p>
+
+        <p>
+            <strong>Instagram:</strong>
+            pulsoverdeoficial
+        </p>
+
+        <p>
+            <strong>E-mail:</strong>
+            pulsoverde@gmail.com
+        </p>
+
+        <a href="quero.html" class="botao">
+            💚 FAÇA UMA DOAÇÃO
+        </a>
+
+    </section>
+
+
+    <footer class="rodape">
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+
+</html>
+

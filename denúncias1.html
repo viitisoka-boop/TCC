@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Denúncias</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #91c794;
+            font-family: 'Poppins', sans-serif;
+            color: #71a679;
+        }
+
+
+        .cabecalho {
+            background-color: #ffffff;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(11, 44, 23, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icone {
+            font-size: 35px;
+        }
+
+        .logo-texto h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 24px;
+        }
+
+        .logo-texto p {
+            color: #5b8f5e;
+            font-size: 12px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #0b2c17;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #e5f1e3;
+            color: #5b8f5e;
+        }
+
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .introducao h1 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .introducao p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #71a679;
+        }
+
+        .formulario {
+            background-color: #fafff9;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .formulario h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            margin-bottom: 18px;
+        }
+
+        .campo label {
+            display: block;
+            color: #0b2c17;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .campo input,
+        .campo select,
+        .campo textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b7d6b8;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        .campo input:focus,
+        .campo select:focus,
+        .campo textarea:focus {
+            border-color: #5b8f5e;
+        }
+
+        .campo textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .linha {
+            display: flex;
+            gap: 18px;
+        }
+
+        .linha .campo {
+            flex: 1;
+        }
+
+        .informacao {
+            background-color: #e5f1e3;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #0b2c17;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .botao {
+            display: block;
+            width: 100%;
+            background-color: #0b2c17;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #5b8f5e;
+        }
+
+
+        .mensagem-sucesso {
+            display: none;
+            background-color: #e5f1e3;
+            padding: 25px;
+            border-radius: 14px;
+            margin-top: 20px;
+            text-align: center;
+            color: #0b2c17;
+        }
+
+        .mensagem-sucesso h2 {
+            font-family: 'Bree Serif', serif;
+            margin-bottom: 10px;
+        }
+
+        .mensagem-sucesso p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        .transparencia {
+            margin-top: 25px;
+            padding: 22px;
+            background-color: #ffffff;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(11, 44, 23, 0.10);
+        }
+
+        .transparencia h2 {
+            color: #0b2c17;
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .transparencia p {
+            color: #5b8f5e;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        .rodape {
+            background-color: #91c794;
+            color: #0b2c17;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+
+        body.dark-mode {
+            background-color: #17251b;
+            color: #e5eee6;
+        }
+
+        .dark-mode .cabecalho {
+            background-color: #202f24;
+        }
+
+        .dark-mode .logo-texto h2,
+        .dark-mode .menu a {
+            color: #e5eee6;
+        }
+
+        .dark-mode .logo-texto p {
+            color: #a8c9aa;
+        }
+
+        .dark-mode .menu a:hover {
+            background-color: #354b39;
+            color: #b4d9b6;
+        }
+
+        .dark-mode .container {
+            background-color: #202f24;
+        }
+
+        .dark-mode .introducao h1,
+        .dark-mode .formulario h2,
+        .dark-mode .transparencia h2 {
+            color: #e5eee6;
+        }
+
+        .dark-mode .introducao p {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .formulario {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .campo label {
+            color: #e5eee6;
+        }
+
+        .dark-mode .campo input,
+        .dark-mode .campo select,
+        .dark-mode .campo textarea {
+            background-color: #202f24;
+            border-color: #58765d;
+            color: #e5eee6;
+        }
+
+        .dark-mode .campo input::placeholder,
+        .dark-mode .campo textarea::placeholder {
+            color: #a8c9aa;
+        }
+
+        .dark-mode .campo input:focus,
+        .dark-mode .campo select:focus,
+        .dark-mode .campo textarea:focus {
+            border-color: #a8c9aa;
+        }
+
+        .dark-mode .informacao {
+            background-color: #354b39;
+            color: #e5eee6;
+        }
+
+        .dark-mode .botao {
+            background-color: #9bc69e;
+            color: #17251b;
+        }
+
+        .dark-mode .botao:hover {
+            background-color: #b4d9b6;
+        }
+
+        .dark-mode .mensagem-sucesso {
+            background-color: #354b39;
+            color: #e5eee6;
+        }
+
+        .dark-mode .transparencia {
+            background-color: #263b2c;
+        }
+
+        .dark-mode .transparencia p {
+            color: #b4d9b6;
+        }
+
+        .dark-mode .rodape {
+            background-color: #202f24;
+            color: #e5eee6;
+        }
+
+        @media (max-width: 600px) {
+
+            .cabecalho {
+                flex-direction: column;
+                padding: 18px 12px;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            .introducao h1 {
+                font-size: 32px;
+            }
+
+            .linha {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .formulario {
+                padding: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <div class="logo-icone">🐾</div>
+
+            <div class="logo-texto">
+                <h2>PULSO VERDE</h2>
+                <p>Proteção Animal e Tecnologia</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="inicial.html">INÍCIO</a>
+            <a href="adoções.html">ADOÇÃO</a>
+            <a href="doações.html">DOAÇÕES</a>
+            <a href="denúncias.html">DENÚNCIAS</a>
+            <a href="leis.html">LEIS</a>
+            <a href="mais.html">MAIS INFORMAÇÕES</a>
+            <a href="pessoa.html">MEU PERFIL</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="introducao">
+
+            <h1>DENÚNCIAS</h1>
+
+            <p>
+                Sua denúncia pode salvar uma vida!
+                <br>
+                Viu algum animal sofrendo maus-tratos ou abandono?
+                Preencha o formulário abaixo com as informações do ocorrido.
+            </p>
+
+        </section>
+
+        <form class="formulario" id="formulario-denuncia">
+
+            <h2>REGISTRE UMA DENÚNCIA 🐾</h2>
+
+            <div class="informacao">
+                Preencha os campos com o máximo de informações possíveis.
+                Se tiver fotos ou vídeos, você também poderá anexá-los
+            </div>
+
+            <div class="linha">
+
+                <div class="campo">
+                    <label>Seu nome (opcional)</label>
+                    <input type="text" placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo">
+                    <label>E-mail ou telefone (opcional)</label>
+                    <input type="text" placeholder="Digite seu contato">
+                </div>
+
+            </div>
+
+            <div class="campo">
+
+                <label>Qual é o tipo de ocorrência?</label>
+
+                <select required>
+                    <option value="">Selecione uma opção</option>
+                    <option>Abandono de animais</option>
+                    <option>Agressão física</option>
+                    <option>Falta de alimentação</option>
+                    <option>Falta de água</option>
+                    <option>Animal preso em local inadequado</option>
+                    <option>Falta de cuidados e higiene</option>
+                    <option>Outros</option>
+                </select>
+
+            </div>
+
+            <div class="campo">
+
+                <label>Descreva o que aconteceu</label>
+
+                <textarea placeholder="Conte com detalhes o que aconteceu, como é a situação do animal e outras informações importantes..." required></textarea>
+
+            </div>
+
+            <div class="campo">
+
+                <label>Local onde aconteceu</label>
+
+                <input
+                    type="text"
+                    id="localizacao"
+                    placeholder="Rua, bairro, cidade ou ponto de referência"
+                    required
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label>Data da ocorrência</label>
+
+                <input type="date">
+
+            </div>
+
+            <div class="campo">
+
+                <label>Horário aproximado</label>
+
+                <input type="time">
+
+            </div>
+
+            <div class="campo">
+
+                <label>Fotos ou vídeos do ocorrido</label>
+
+                <input type="file" accept="image/*,video/*" multiple>
+
+            </div>
+
+            <div class="informacao">
+                📍 Informe o endereço correto para facilitar a localização
+                do caso. Não se coloque em perigo para conseguir provas.
+            </div>
+
+            <button type="submit" class="botao">
+                ENVIAR DENÚNCIA
+            </button>
+
+        </form>
+
+        <div class="mensagem-sucesso" id="mensagem-sucesso">
+
+            <h2>🐾 Obrigada pela denúncia!</h2>
+
+            <p>
+                Sua participação é muito importante para a proteção animal.
+                As informações serão encaminhadas às autoridades competentes
+                para que possam ser tomadas as providências necessárias.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer class="rodape">
+
+        <p>
+            © 2026 Pulso Verde - Proteção Animal e Tecnologia
+            | Juntos, transformamos vidas!
+        </p>
+
+    </footer>
+
+    <script>
+
+        const formulario = document.getElementById("formulario-denuncia");
+        const localizacao = document.getElementById("localizacao");
+        const mensagem = document.getElementById("mensagem-sucesso");
+
+       localizacao.addEventListener("invalid", function() {
+            this.setCustomValidity("Este campo é obrigatório! Informe o local onde aconteceu.");
+        });
+
+        localizacao.addEventListener("input", function() {
+            this.setCustomValidity("");
+        });
+
+        formulario.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            if (localizacao.value.trim() === "") {
+
+                localizacao.setCustomValidity("Este campo é obrigatório! Informe o local onde aconteceu.");
+
+                localizacao.reportValidity();
+
+                return;
+            }
+
+            formulario.style.display = "none";
+            mensagem.style.display = "block";
+
+        });
+
+    </script>
+
+    <script src="temaescuro.js"></script>
+
+</body>
+</html>
